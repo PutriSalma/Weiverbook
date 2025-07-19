@@ -1,0 +1,21 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.Weiverbook" parent="Theme.Material3.DayNight.NoActionBar">
+    </style>
+
+    <style name="Theme.Weiverbook" parent="Base.Theme.Weiverbook" />
+
+    <style name="RoundedImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@android:color/white</item>
+
+        <item name="windowSplashScreenAnimatedIcon">@drawable/logo_weiverbook2</item>
+
+        <item name="windowSplashScreenIconBackgroundColor">@android:color/white</item>
+
+        <item name="postSplashScreenTheme">@style/Theme.Weiverbook</item>
+    </style>
+</resources>

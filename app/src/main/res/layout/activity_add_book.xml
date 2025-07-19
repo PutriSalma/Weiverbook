@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:fillViewport="true"
+    tools:context=".AddBookActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <ImageView
+            android:id="@+id/iv_logo_add"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/logo_weiverbook"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="Logo Weiverbook" />
+
+        <TextView
+            android:id="@+id/tv_app_name_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Weiverbook"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_logo_add"
+            app:layout_constraintStart_toEndOf="@+id/iv_logo_add"
+            app:layout_constraintTop_toTopOf="@+id/iv_logo_add" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_add_book_cover_preview"
+            android:layout_width="150dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="32dp"
+            android:background="#f0f0f0"
+            android:contentDescription="Preview sampul buku"
+            android:padding="1dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logo_weiverbook"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_logo_add"
+            app:shapeAppearanceOverlay="@style/RoundedImageView"
+            app:strokeColor="@color/cardview_dark_background"
+            app:strokeWidth="1dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_select_image"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Pilih Gambar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_add_book_cover_preview" />
+
+        <EditText
+            android:id="@+id/et_add_title"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/edit_text_background"
+            android:hint="Judul Buku"
+            android:inputType="textCapWords"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_select_image" />
+
+        <EditText
+            android:id="@+id/et_add_author"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edit_text_background"
+            android:hint="Nama Penulis"
+            android:inputType="textCapWords"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_add_title" />
+
+        <EditText
+            android:id="@+id/et_add_synopsis"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edit_text_background"
+            android:gravity="top"
+            android:hint="Sinopsis"
+            android:inputType="textMultiLine|textCapSentences"
+            android:minLines="4"
+            android:paddingStart="20dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="12dp"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_add_author" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_save_book"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/button_background"
+            android:text="Simpan Buku"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_add_synopsis" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
