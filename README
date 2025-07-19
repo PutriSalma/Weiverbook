@@ -1,0 +1,90 @@
+# 📚 Weiverbook
+
+## 📌 Deskripsi Proyek
+**Weiverbook** adalah aplikasi review buku yang dirancang untuk membantu pengguna menemukan, menilai, dan berbagi pengalaman membaca.  
+Pengguna dapat melihat daftar buku lengkap dengan **judul**, **penulis**, **sinopsis**, serta **gambar sampul**.  
+Setiap buku dapat diberi **ulasan** dan **rating**, sehingga membantu pengguna lain memilih bacaan yang sesuai.  
+
+Aplikasi ini menyediakan fitur **tambah**, **edit**, dan **hapus** data buku. Antarmuka yang sederhana dan responsif membuat pengalaman menggunakan Weiverbook menjadi nyaman, baik untuk sekadar mencari referensi buku maupun berbagi pendapat pribadi.
+
+---
+
+## 🎯 Tujuan Proyek
+- Mengembangkan aplikasi mobile yang dapat menampilkan daftar buku, memungkinkan pengguna memberikan ulasan dan rating, serta mempermudah pengelolaan data buku.
+- Meningkatkan kemampuan pemrograman mobile dengan menggunakan **Android Studio**, **Java**, dan **SQLite**.
+
+---
+
+## ✨ Fitur Utama
+✅ **Autentikasi Pengguna (Login & Registrasi)**  
+Pengguna dapat membuat akun dan login agar sesi tetap aman.  
+
+✅ **Manajemen Katalog Buku (Tambah, Edit, Hapus)**  
+Pengguna dapat menambahkan, mengedit, dan menghapus data buku lengkap dengan judul, penulis, sinopsis, dan gambar sampul.  
+
+✅ **Sistem Rating dan Review**  
+Setiap buku bisa diberi rating bintang (1–5) dan ulasan teks.  
+
+✅ **Tampilan Detail dan Interaktif**  
+Menampilkan daftar buku dengan tampilan grid. Klik buku untuk melihat detail lengkap & review.  
+
+✅ **Upload Gambar Sampul Kustom**  
+Pengguna bisa mengunggah gambar sampul dari galeri.
+
+---
+
+## 🛠️ Teknologi yang Digunakan
+- **Bahasa Pemrograman:** Java  
+- **Framework:** Android SDK  
+- **Database:** SQLite  
+- **Library & Tools:**
+  - AndroidX Libraries (AppCompat, ConstraintLayout, RecyclerView)
+  - Material Components for Android (UI modern)
+  - Glide (memuat & menampilkan gambar)
+
+---
+
+## 🎨 Desain Aplikasi
+- **UI:** Mengadopsi Material Design dengan RecyclerView (GridLayoutManager) di halaman utama dan ConstraintLayout + ScrollView di halaman detail.
+- **Database:**
+  - **Users:** Menyimpan data akun pengguna (ID, username, password).
+  - **Books:** Menyimpan data buku (ID, judul, penulis, sinopsis, nama/path gambar).
+  - **Reviews:** Menyimpan ulasan & rating per buku, terhubung ke Users dan Books.
+
+---
+
+## ⚙️ Implementasi
+1. **Setup Proyek:** Inisialisasi proyek Android Studio, tambah dependensi Material Components & Glide.  
+2. **Desain Database:** Buat `DatabaseHelper` untuk skema & fungsi CRUD.  
+3. **Autentikasi:** Login & Registrasi dengan `SessionManager`.  
+4. **Tampilan Utama:** `MainActivity` dengan `RecyclerView` & `BookAdapter`.  
+5. **Manajemen Buku:** `AddBookActivity` untuk tambah/edit data buku & upload gambar.  
+6. **Fitur Review:** `DetailActivity` untuk detail buku & daftar review, `AddReviewActivity` untuk tambah ulasan.  
+7. **Finalisasi:** Build signed APK.
+
+---
+
+## ✅ Pengujian
+- **Metode:** Pengujian manual di emulator & perangkat fisik.
+- **Hasil:**  
+  ✔️ Registrasi & login berjalan baik  
+  ✔️ Tambah/edit/hapus buku berfungsi  
+  ✔️ Review & rating tampil sesuai  
+  ✔️ Upload & tampilkan gambar lancar
+
+---
+
+## 📌 Kesimpulan
+**Weiverbook** berhasil dikembangkan sebagai aplikasi katalog & review buku berbasis Android dengan fitur autentikasi, manajemen buku, dan sistem review.  
+Struktur SQLite lokal dan Activity terpisah menjadi fondasi yang solid untuk aplikasi skala kecil hingga menengah.
+
+**Saran pengembangan selanjutnya:**
+- 🔹 Migrasi ke ViewModel & LiveData untuk manajemen state yang lebih baik.
+- 🔹 Pindah ke database online (contoh: Firebase Firestore) untuk sinkronisasi real-time.
+- 🔹 Tambahkan fitur sosial (profil pengguna, komentar).
+- 🔹 Fitur pencarian & filter buku berdasarkan judul, penulis, atau rating.
+
+---
+
+💜 **Dikembangkan oleh:** Putri Salma Wulandari  
+📂 **Repo:** [Weiverbook](https://github.com/PutriSalma/Weiverbook)
